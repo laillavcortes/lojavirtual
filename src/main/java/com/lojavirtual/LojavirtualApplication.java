@@ -9,11 +9,7 @@ public class LojavirtualApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(LojavirtualApplication.class, args);
 		
-		
-		
-		System.out.println("Banco Rodando");
-		
-		
+		System.out.println("BANCO RODANDO");
 	}
 
 }
