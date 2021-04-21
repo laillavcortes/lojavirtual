@@ -1,16 +1,18 @@
-package com.lojavirtual.resource;
+package com.lojavirtual.resources;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value="/categorias")
+@RequestMapping (value="/categorias")
 public class CategoriaResource {
 	
-	@RequestMapping(method=RequestMethod.GET)
+	
+	@RequestMapping(method = RequestMethod.GET)
 	public String listar() {
-		return "Professor fellipe";
+		return "REST ESTA FUNCIONANDO";
+		
 	}
 
 }

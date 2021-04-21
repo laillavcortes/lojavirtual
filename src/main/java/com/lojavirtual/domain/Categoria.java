@@ -1,14 +1,15 @@
 package com.lojavirtual.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import java.io.Serializable;
 
-@Entity
-@Table(name="categoria")
-public class Categoria {
+public class Categoria implements Serializable  {
 	
-	@Id
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private Integer id;
 	
 	private String nome;
