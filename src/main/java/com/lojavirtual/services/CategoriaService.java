@@ -14,25 +14,24 @@ import com.lojavirtual.repositories.CategoriaRepository;
 @Service
 public class CategoriaService {
 	
+	
 	@Autowired
 	private CategoriaRepository repository;
 	
 	public Optional<Categoria> find(Integer id) {
-			
 		Optional<Categoria> categoria = repository.findById(id);
-		
 		return categoria;
-		
 	}
 	
 	@Transactional
-	public Categoria insert(Categoria categoria){
-		categoria.setId(null);
-		categoria = repository.save(categoria);
-		return categoria;
-	}
+    public Categoria insert(Categoria categoria) {
+        categoria.setId(null);
+        categoria = repository.save(categoria);
+        return categoria;
+    }
 	
 	public List<Categoria> findAll(){
 		return repository.findAll();
 	}
+
 }
