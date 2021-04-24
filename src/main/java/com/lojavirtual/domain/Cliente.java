@@ -17,14 +17,18 @@ public class Cliente implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
-	
 	private Integer id;
 	private String nome;
 	private String cpf;
 	private String email;
 	private String senha;
 	
+	
+	
+		public Cliente() {
+		super();
+	}
+
 		public Cliente(Integer id, String nome, String cpf, String email, String senha) {
 		super();
 		this.id = id;
