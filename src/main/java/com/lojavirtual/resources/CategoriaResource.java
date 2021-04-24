@@ -26,7 +26,7 @@ public class CategoriaResource {
 	private CategoriaService service;
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
-	public Optional<Categoria> getById(@PathVariable Integer id) {
+	public Categoria getById(@PathVariable Integer id) {
 		return service.find(id);
 	}
 	

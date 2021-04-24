@@ -26,7 +26,7 @@ public class ProdutoResource {
 	private ProdutoService service;
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
-	public Optional<Produto> getById(@PathVariable Integer id) {
+	public Produto getById(@PathVariable Integer id) {
 		return service.find(id);
 	}
 	

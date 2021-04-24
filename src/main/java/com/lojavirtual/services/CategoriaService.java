@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 
 import com.lojavirtual.domain.Categoria;
 import com.lojavirtual.repositories.CategoriaRepository;
+import com.lojavirtual.services.exceptions.ObjectNotFoundException;
+
+
 
 @Service
 public class CategoriaService {
@@ -18,9 +21,9 @@ public class CategoriaService {
 	@Autowired
 	private CategoriaRepository repository;
 	
-	public Optional<Categoria> find(Integer id) {
+	public Categoria find(Integer id) {
 		Optional<Categoria> categoria = repository.findById(id);
-		return categoria;
+		return categoria.orElseThrow(()-> new ObjectNotFoundException("Categoria nao encontrada! Id: " + id + ", tipo: " + Categoria.class.getName()));
 	}
 	
 	@Transactional
